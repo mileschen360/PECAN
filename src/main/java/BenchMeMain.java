@@ -6,7 +6,8 @@ import static java.lang.Thread.sleep;
 public class BenchMeMain {
 
     public static void main(String[] args){
-        AppConcertAdmission app = new AppConcertAdmission();
+        //AppConcertAdmission app = new AppConcertAdmission();
+        AppHelloGCounter app = new AppHelloGCounter();
         app.test();
     }
 

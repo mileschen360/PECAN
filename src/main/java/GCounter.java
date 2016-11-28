@@ -26,6 +26,10 @@ public class GCounter{
         }
     }
 
+    public void increase(int delta, int hosted_node_id){
+        vals_over_nodes[hosted_node_id] += delta;
+    }
+
     public Integer value(){
         int sum = 0;
         for (int i=0; i< n_nodes; ++i){

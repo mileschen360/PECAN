@@ -1,5 +1,5 @@
 public class PrionCloud{  // TODO: templatize PrionClound
-    public int n_nodes;
+    public int n_nodes;             // i.e. number of replicas
     public GCounter[] data_nodes;   // thread UNSAFE!!!!
     private static final boolean print_debug_info = false;
 
@@ -7,7 +7,7 @@ public class PrionCloud{  // TODO: templatize PrionClound
         n_nodes = n_nodes_in;
         data_nodes = new GCounter[n_nodes];
         for (int i_node=0; i_node<n_nodes; ++i_node){
-            data_nodes[i_node] = new GCounter(n_nodes);
+            data_nodes[i_node] = new GCounter(n_nodes); // a GCounter is designed to has number of parts the same as the number of nodes of the cluster it lives in
         }
     }
 
