@@ -1,6 +1,7 @@
 public class PrionCloud{  // TODO: templatize PrionClound
     public int n_nodes;
     public GCounter[] data_nodes;   // thread UNSAFE!!!!
+    private static final boolean print_debug_info = false;
 
     public PrionCloud(int n_nodes_in){
         n_nodes = n_nodes_in;
@@ -24,12 +25,16 @@ public class PrionCloud{  // TODO: templatize PrionClound
     public GCounter get(int i_node){
         GCounter dd = data_nodes[i_node];
         dd.hosted_node_id = i_node;
-        System.out.println(">>>>>>");
+        if (print_debug_info) {
+            System.out.println(">>>>>>");
+        }
         return dd;
     }
 
     public void put(GCounter dd, int i_node){ // dd: distributed data
-        System.out.println("<<<<<<");
+        if (print_debug_info) {
+            System.out.println("<<<<<<");
+        }
         data_nodes[i_node] = data_nodes[i_node].merge(dd);
     }
 }

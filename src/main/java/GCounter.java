@@ -8,6 +8,7 @@ public class GCounter{
     public int[] vals_over_nodes;
     public int hosted_node_id;
     public int n_nodes;
+    private static final boolean print_debug_info = false;
 
     public GCounter(int n_nodes_in){
         vals_over_nodes = new int[n_nodes_in];
@@ -16,15 +17,21 @@ public class GCounter{
     }
 
     public void increase(int delta){
-        System.out.println("read  #"+hosted_node_id+" "+vals_over_nodes[hosted_node_id]);
+        if (print_debug_info) {
+            System.out.println("read  #" + hosted_node_id + " " + vals_over_nodes[hosted_node_id]);
+        }
         vals_over_nodes[hosted_node_id] += delta;
-        System.out.println("write #"+hosted_node_id+" "+vals_over_nodes[hosted_node_id]);
+        if (print_debug_info) {
+            System.out.println("write #" + hosted_node_id + " " + vals_over_nodes[hosted_node_id]);
+        }
     }
 
     public Integer value(){
         int sum = 0;
         for (int i=0; i< n_nodes; ++i){
-            System.out.println("read #"+i+" "+vals_over_nodes[i]);
+            if (print_debug_info) {
+                System.out.println("read #" + i + " " + vals_over_nodes[i]);
+            }
             sum += vals_over_nodes[i];
         }
         return sum;

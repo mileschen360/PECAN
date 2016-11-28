@@ -1,77 +1,45 @@
-import static java.lang.Thread.sleep;
-
 /**
  * Created by bookchen on 11/27/16.
  */
 public class AppConcertAdmission {
-    final static int n_entrances = 2;  // number of entrances,
-    final static int n_seats   = 4;    // use to test the correctness of this application
+    private final static int n_entrances = 2;  // number of entrances,
+    private final static int n_seats   = 40;    // use to test the correctness of this application
     static PrionCloud cloud = new PrionCloud(n_entrances); // create a RDT/cluster with the same number of replicas/nodes
-    final int interval_ms = 10;
 
     public AppConcertAdmission(){
-        // cloud.online(interval_ms);
     }
 
-    /// Ticket needed
     public void test(){
-        int n_tickets = n_seats;
-        //ticket_admission(n_tickets);
         free_admission();
+        //int n_tickets = n_seats;
+        //ticket_admission(n_tickets);
 
-        try {
-            sleep(1000);  // adjust how long you want to wait to enroll next person
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        cloud.propagate(); // make the distributed system to arrive eventual state
 
-        cloud.propagate();
-        GCounter drip = cloud.get(1);
-        drip.value();
-        //assert (drip.value()<=n_seats);
-        //System.out.print("drip = ");
-        //System.out.println(drip.value());
-
+        /// below is to check if the result is expected
+        GCounter drip = cloud.get(0);
+        System.out.print("eventually drip = ");
+        System.out.print(drip.value());
+        System.out.println(", correct drip = " + n_seats);
+        assert (drip.value()==n_seats);
     }
 
 
-    static void ticket_admission(int n_tickets){
+    void ticket_admission(int n_tickets){
         GCounter drip;
-        // start entering
         for(int i=0; i<n_tickets; ++i) {
             drip = cloud.get(i%2);
             drip.increase(1);
-            cloud.put(drip,0);
-            cloud.propagate();
-            try {
-                sleep(1000);  // adjust how long you want to wait to enroll next person
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+            cloud.put(drip, 0);
         }
     }
 
-    static void free_admission (){
-        GCounter drip;
-        // start entering
+    void free_admission (){
         int i=1;
-        for (drip = cloud.get(i%2); drip.value()<n_seats; drip = cloud.get(i%2)) {
+        for (GCounter drip = cloud.get(i%2); drip.value()<n_seats; drip = cloud.get(i%2)) {
             drip.increase(1);
             cloud.put(drip,0);
-            cloud.propagate();
-            try {
-                sleep(500);  // adjust how long you want to wait to enroll next person
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
             i++;
         }
-
-        //assert (drip.value()<=n_seats);
-        //System.out.print("drip = ");
-        //System.out.println(drip.value());
     }
-
-
-
 }
