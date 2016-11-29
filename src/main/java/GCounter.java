@@ -4,16 +4,15 @@ import java.lang.Math;
 *
 *  */
 
-public class GCounter{
+public class GCounter extends Replica{
     public int[] vals_over_nodes;
-    public int hosted_node_id;
     public int n_nodes;
     private static final boolean print_debug_info = false;
 
     public GCounter(int n_nodes_in){
         vals_over_nodes = new int[n_nodes_in];
         this.n_nodes = n_nodes_in;
-        hosted_node_id = -1;
+        this.hosted_node_id = -1;
     }
 
     public void increase(int delta){
@@ -48,7 +47,8 @@ public class GCounter{
         return val_this < val_another;
     }*/
 
-    public GCounter merge(GCounter another) {
+    public GCounter merge(Replica another_in) {
+        GCounter another = (GCounter) another_in;
         GCounter merged = new GCounter(another.n_nodes);
         for (int i_node = 0; i_node < n_nodes; ++i_node) {
             merged.vals_over_nodes[i_node] = Math.max(this.vals_over_nodes[i_node],

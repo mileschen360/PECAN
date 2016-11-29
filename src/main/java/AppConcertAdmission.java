@@ -6,7 +6,8 @@ public class AppConcertAdmission {
     private final static int n_entrances = 2;  // number of entrances,
     private final static int n_seats   = 3;    // use to test the correctness of this application
     // when n_seats = even, free_admission() will fail, when n_seats = odd, it still work, but just HAPPEN to be correct.
-    static PrionCloud cloud = new PrionCloud(n_entrances); // create a RDT/cluster with the same number of replicas/nodes
+    PrionCloud<GCounter> cloud = new PrionCloud<GCounter>(n_entrances, GCounter.class); // create a RDT/cluster with the same number of replicas/nodes
+
 
     public AppConcertAdmission(){
     }
