@@ -7,7 +7,8 @@ public class BenchMeMain {
 
     public static void main(String[] args){
         //AppConcertAdmission app = new AppConcertAdmission();
-        AppHelloGCounter app = new AppHelloGCounter();
+        //AppHelloGCounter app = new AppHelloGCounter();
+        AppBankAccount app = new AppBankAccount();
         app.test();
     }
 

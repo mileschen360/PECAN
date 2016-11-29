@@ -7,7 +7,6 @@ import java.lang.Math;
 public class PNCounter extends Replica{
     public int[] pvals_over_nodes;
     public int[] nvals_over_nodes;
-    public int hosted_node_id;
     public int n_nodes;
     private static final boolean print_debug_info = false;
 
