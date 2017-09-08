@@ -1,3 +1,8 @@
+/** This package provide a in-memory replica data type (or cloud)
+ * 
+ */
+package infrastructure;
+
 import java.lang.reflect.Array;
 import java.lang.reflect.InvocationTargetException;
 

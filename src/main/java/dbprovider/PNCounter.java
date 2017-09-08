@@ -1,9 +1,12 @@
-import java.lang.Math;
 /* This is CvRTD PNCounter
 *
 *
 *  */
 
+package dbprovider;
+
+import java.lang.Math;
+import infrastructure.Replica;
 public class PNCounter extends Replica{
     public int[] pvals_over_nodes;
     public int[] nvals_over_nodes;

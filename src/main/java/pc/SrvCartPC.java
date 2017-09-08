@@ -20,7 +20,9 @@ public class SrvCartPC implements declaration.SrvCart{
         
     public void test(){
         System.out.println("testing SrvCartPC");
+        
     }
+
     public void add(int product_id) {
         for(int i=0; i<CAPACITY; ++i){
             if (product_ids[i] == -1){

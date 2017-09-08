@@ -1,5 +1,7 @@
-/**
- * Created by bookchen on 8/16/16.
+package infrastructure;
+
+/** This package provide a in-memory replica data type (or cloud)
+ * 
  */
 public class PropagatingThread extends Thread{
     private PrionCloud cloud;

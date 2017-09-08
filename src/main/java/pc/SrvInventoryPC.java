@@ -1,3 +1,9 @@
+/** This package contains the javaapp version of tested program
+ *  to be tested by JPF. PC means personal computer, i.e. it is
+ *  a desktop app without network communications
+ */
+
+
 package pc;
 public class SrvInventoryPC implements declaration.SrvInventory{
     final int CAPACITY = 20;

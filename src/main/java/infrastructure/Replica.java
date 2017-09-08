@@ -1,6 +1,8 @@
-/**
- * Created by bookchen on 11/29/16.
+/** This package provide a in-memory replica data type (or cloud)
+ * 
  */
+
+package infrastructure;
 public abstract class Replica{
     public int hosted_node_id;
     public abstract <T extends Replica> T merge(T another);

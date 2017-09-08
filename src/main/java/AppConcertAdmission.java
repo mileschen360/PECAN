@@ -1,8 +1,12 @@
-
 /**
  * Created by bookchen on 11/27/16.
  */
-public class AppConcertAdmission {
+
+import infrastructure.PrionCloud;
+import dbprovider.GCounter;
+
+
+ public class AppConcertAdmission {
     private final static int n_entrances = 2;  // number of entrances,
     private final static int n_seats   = 3;    // use to test the correctness of this application
     // when n_seats = even, free_admission() will fail, when n_seats = odd, it still work, but just HAPPEN to be correct.

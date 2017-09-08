@@ -1,10 +1,13 @@
-import java.lang.Math;
 /* This is CvRTD GCounter
 *
 *
 *  */
 
-public class GCounter extends Replica{
+package dbprovider;
+
+import java.lang.Math;
+
+public class GCounter extends infrastructure.Replica{
     public int[] vals_over_nodes;
     public int n_nodes;
     private static final boolean print_debug_info = false;
@@ -47,7 +50,7 @@ public class GCounter extends Replica{
         return val_this < val_another;
     }*/
 
-    public GCounter merge(Replica another_in) {
+    public GCounter merge(infrastructure.Replica another_in) {
         GCounter another = (GCounter) another_in;
         GCounter merged = new GCounter(another.n_nodes);
         for (int i_node = 0; i_node < n_nodes; ++i_node) {
