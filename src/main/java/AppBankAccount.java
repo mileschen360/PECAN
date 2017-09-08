@@ -3,9 +3,11 @@ public class AppBankAccount{
     PrionCloud<PNCounter> cloud = new PrionCloud<PNCounter>(n_replicas, PNCounter.class);
 
     public void test(){
+        System.out.println("Testing AppBankAccount");
         deposit(100,0);
         withdraw(80,0);
-        withdraw(70,1);
+        withdraw(70,0);
+        System.out.println(balance());
         assert(balance()>=0);
     }
 

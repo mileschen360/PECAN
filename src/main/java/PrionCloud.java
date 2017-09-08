@@ -38,6 +38,10 @@ public class PrionCloud<T extends Replica>{  // TODO: templatize PrionClound
         data_nodes[0] = data_nodes[0].merge(data_nodes[1]);
     }
 
+    public void fence() {
+
+    }
+
 
     public T get(int i_node){
         T dd = data_nodes[i_node];

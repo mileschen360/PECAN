@@ -32,7 +32,7 @@ public class PNCounter extends Replica{
         if (print_debug_info) {
             System.out.println("read  n#" + hosted_node_id + " " + nvals_over_nodes[hosted_node_id]);
         }
-        nvals_over_nodes[hosted_node_id] -= delta;
+        nvals_over_nodes[hosted_node_id] += delta;  // increase the negative part
         if (print_debug_info) {
             System.out.println("write n#" + hosted_node_id + " " + nvals_over_nodes[hosted_node_id]);
         }
