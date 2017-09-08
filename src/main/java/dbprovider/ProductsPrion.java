@@ -8,8 +8,9 @@ public class ProductsPrion extends infrastructure.Replica{
     int[] balances;
     String[] product_docs;
 
-    public ProductsPrion(){
+    public ProductsPrion(int n_nodes_in){
         balances = new int[CAPACITY];
+        product_docs = new String[CAPACITY];
         // init an empty inventory
         for(int i=0; i<CAPACITY; ++i){
             balances[i] = -1;

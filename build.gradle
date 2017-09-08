@@ -5,7 +5,7 @@ apply plugin: 'war'
 apply plugin: 'jetty'
 
 
-//mainClassName = "BenchMeMain"
+mainClassName = "BenchMeMain"
 
 sourceCompatibility = 1.5
 version = '1.0'

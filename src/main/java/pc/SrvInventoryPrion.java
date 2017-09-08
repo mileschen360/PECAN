@@ -16,6 +16,8 @@ public class SrvInventoryPrion implements declaration.SrvInventory{
     PrionCloud<ProductsPrion> cloud =
         new PrionCloud<ProductsPrion>(n_replicas, ProductsPrion.class);
 
+    public SrvInventoryPrion(){}
+
     /** simulate the operation of inventory
      * 
     */
