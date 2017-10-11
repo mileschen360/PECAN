@@ -41,6 +41,10 @@ public class SrvCartPC implements declaration.SrvCart{
         }
     }
 
+    public void checkout(){
+        // TODO: implement this
+    }
+
     private void pull_product_docs(){
         for(int i=0; i<CAPACITY; ++i){
             if (product_ids[i]!=-1){

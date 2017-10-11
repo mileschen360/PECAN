@@ -22,6 +22,10 @@ public class SrvCartWeb implements declaration.SrvCart{
         public void remove(int product_id){
     
         }
+
+        public void checkout(){
+            // TODO
+        }
         
         @GET
         @Path("/{name}")

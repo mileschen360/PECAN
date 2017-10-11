@@ -10,10 +10,23 @@
     <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
 
     <!-- Services package configuration. -->
-    <init-param>
+    <!-- <init-param>
       <param-name>jersey.config.server.provider.packages</param-name>
       <param-value>web</param-value>
-    </init-param>    
+    </init-param> -->
+
+<init-param>
+    <param-name>com.sun.jersey.config.property.packages</param-name>
+    <param-value>web</param-value>
+</init-param>
+
+
+        <init-param>
+            <param-name>jersey.config.server.provider.classnames</param-name>
+            <param-value>org.glassfish.jersey.server.mvc.mustache.MustacheMvcFeature</param-value>
+        </init-param>
+
+
   </servlet>
   <servlet-mapping>
     <servlet-name>JerseyServlet</servlet-name>
