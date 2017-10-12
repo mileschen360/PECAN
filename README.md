@@ -2,7 +2,7 @@
 
 # PECAN: benchmarks for *P*rogramming *E*ventual *C*onsistency *AN*omaly
 
-PECAN is a benchmark set for programming eventual consistency systems, such as Riak and Cassandra. These benchmarks are extracted from real usage scenarios.
+PECAN is a benchmark set for programming eventual consistent systems, such as Riak and Cassandra. These benchmarks are extracted from real usage scenarios of eventual consistent systems.
 
 ## Directory structure
 
