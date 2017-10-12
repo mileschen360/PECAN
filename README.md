@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/mileschen360/BenchMe.svg?branch=master)](https://travis-ci.org/mileschen360/BenchMe)
+[![Build Status](https://travis-ci.org/mileschen360/PECAN.svg?branch=master)](https://travis-ci.org/mileschen360/PECAN)
 
 # PECAN: benchmarks for *P*rogramming *E*ventual *C*onsistency *AN*omaly
 
