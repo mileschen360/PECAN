@@ -8,6 +8,10 @@ PECAN is a benchmark set for programming eventual consistency systems, such as R
 
 All benchmarks are located in bechmarks folder.
 
+## Requirement
+
+   Gradle build system will take care of all the dependency. But to actually run some of the benchmarks that actually talk to a Riak cluster, you need to have a running Riak cluster runing on `127.0.0.1:8089`. The quickest way is to run the docker image from basho, which can be find at https://hub.docker.com/r/basho/riak-kv/
+
 ## List of Benchmarks
 
 ### Distributed Counter
