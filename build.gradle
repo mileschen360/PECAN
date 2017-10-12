@@ -2,7 +2,7 @@ apply plugin: 'java'
 apply plugin: 'application'
 
 apply plugin: 'war'
-apply plugin: 'jetty'
+apply from: 'https://raw.github.com/akhikhl/gretty/master/pluginScripts/gretty.plugin'
 
 
 mainClassName = "BenchMeMain"

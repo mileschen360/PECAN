@@ -40,7 +40,7 @@ public class InstantPoll{
   
     public int getValue(){
     	//System.out.println("balance="+cloud.get(0).value(0));
-        return cloud.get(0).value(0);
+        return cloud.get(0).value();
     }
 
     /*  public static void main(String[] args){

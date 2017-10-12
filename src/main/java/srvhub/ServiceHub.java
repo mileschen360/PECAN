@@ -1,9 +1,9 @@
 package srvhub;
 
-import pc.SrvInventoryPrion;
+import benchmarks.SrvInventoryPrion;
 
 public class ServiceHub {
-    public static pc.SrvCartPC srv_cart_pc;
-    public static pc.SrvInventoryPC srv_inventory_pc;
+    public static benchmarks.SrvCartPC srv_cart_pc;
+    public static benchmarks.SrvInventoryPC srv_inventory_pc;
     public static SrvInventoryPrion srv_inventory_prion;
 }

@@ -10,7 +10,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 
 @Path("/cart")
-public class SrvCartWeb implements declaration.SrvCart{
+public class SrvCartWeb implements scenarios.SrvCart{
     
         public void test(){
             System.out.println("testing SrvCartPC");

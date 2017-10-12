@@ -6,7 +6,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 
 @Path("/inventory")
-public class SrvInventoryWeb implements declaration.SrvInventory{
+public class SrvInventoryWeb implements scenarios.SrvInventory{
     final int CAPACITY = 20;
     int[] balances;
     String[] product_docs;
