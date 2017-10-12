@@ -4,13 +4,12 @@
  */
 
 
-package pc;
+package benchmarks;
 /** this class use Prion Clound for data storage */
 import dbprovider.ProductsPrion;
-import declaration.SrvReview;
 import infrastructure.PrionCloud;
 
-class SrvReviewPrion implements SrvReview{
+class SrvReviewPrion implements scenarios.SrvReview{
     final int n_replicas = 2;
 
     PrionCloud<ProductsPrion> cloud = 

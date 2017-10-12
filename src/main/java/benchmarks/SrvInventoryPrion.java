@@ -4,13 +4,13 @@
  */
 
 
-package pc;
+package benchmarks;
 /** this class use Prion Clound for data storage */
 
 import dbprovider.ProductsPrion;
 import infrastructure.PrionCloud;
 
-public class SrvInventoryPrion implements declaration.SrvInventory{
+public class SrvInventoryPrion implements scenarios.SrvInventory{
     final int n_replicas = 2;
 
     PrionCloud<ProductsPrion> cloud =
@@ -22,6 +22,7 @@ public class SrvInventoryPrion implements declaration.SrvInventory{
      * 
     */
     public void test(){
+        System.out.println("testing SrvInventoryPrion");
         // create 3 product in our database
         createProduct("coke"); // will be assigned product_id 0 automaticly
         createProduct("rice");

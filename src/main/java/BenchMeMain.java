@@ -1,7 +1,7 @@
 import static java.lang.Thread.sleep;
 
 /**
- * Created by Chen on 8/15/16.
+ * 
  */
 public class BenchMeMain {
     public static void main(String[] args){
@@ -12,10 +12,23 @@ public class BenchMeMain {
 
         // pc.SrvCartPC srv_cart = new pc.SrvCartPC();
         // pc.SrvInventoryPC srv_inventory = new pc.SrvInventoryPC();
-        pc.SrvInventoryPrion srv_inventory_prion = new pc.SrvInventoryPrion();
+        //pc.SrvInventoryPrion srv_inventory_prion = new pc.SrvInventoryPrion();
         // srvhub.ServiceHub.srv_cart_pc = srv_cart;
         // srvhub.ServiceHub.srv_inventory_pc = srv_inventory;
         // srvhub.ServiceHub.srv_inventory_prion = srv_inventory;
-        srv_inventory_prion.test(); // test the inventory service
+        //srv_inventory_prion.test(); // test the inventory service
+        try{
+            dbprovider.ProductsRiak.setUpCluster();
+            benchmarks.SrvReviewRiak srv_review_riak = new benchmarks.SrvReviewRiak();
+            srv_review_riak.test();
+            dbprovider.ProductsRiak.cluster.shutdown();
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+
     }
 }
+
+
+
+ 

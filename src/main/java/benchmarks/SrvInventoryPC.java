@@ -4,8 +4,8 @@
  */
 
 
-package pc;
-public class SrvInventoryPC implements declaration.SrvInventory{
+package benchmarks;
+public class SrvInventoryPC implements scenarios.SrvInventory{
     final int CAPACITY = 20;
     static int[] balances;
     static String[] product_docs;

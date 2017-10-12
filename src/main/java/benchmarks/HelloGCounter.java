@@ -1,12 +1,11 @@
-/**
- * Created by bookchen on 11/27/16.
- */
+package benchmarks;
+
 
 import infrastructure.PrionCloud;
 import dbprovider.GCounter;
 
 
-public class AppHelloGCounter {
+public class HelloGCounter {
     private final static int n_replicas = 2;
     private PrionCloud<GCounter> cloud = new PrionCloud<GCounter>(n_replicas, GCounter.class);
 

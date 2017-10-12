@@ -1,19 +1,17 @@
-/**
- * Created by bookchen on 11/27/16.
- */
+package benchmarks;
 
 import infrastructure.PrionCloud;
 import dbprovider.GCounter;
 
 
- public class AppConcertAdmission {
+ public class ConcertAdmission {
     private final static int n_entrances = 2;  // number of entrances,
     private final static int n_seats   = 3;    // use to test the correctness of this application
     // when n_seats = even, free_admission() will fail, when n_seats = odd, it still work, but just HAPPEN to be correct.
     PrionCloud<GCounter> cloud = new PrionCloud<GCounter>(n_entrances, GCounter.class); // create a RDT/cluster with the same number of replicas/nodes
 
 
-    public AppConcertAdmission(){
+    public ConcertAdmission(){
     }
 
     public void test(){

@@ -1,8 +1,5 @@
-/** The inventory service interface. Srv is short for service
- * 
- */
+package scenarios;
 
-package declaration;
 public interface SrvInventory{
     public String get_product_doc(int product_id);
     public void createProduct(String product_doc);

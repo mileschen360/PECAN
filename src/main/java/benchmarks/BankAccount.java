@@ -1,6 +1,8 @@
+package benchmarks;
+
 import infrastructure.PrionCloud;
 import dbprovider.PNCounter;
-public class AppBankAccount{
+public class BankAccount{
     final int n_replicas = 2;
     PrionCloud<PNCounter> cloud = new PrionCloud<PNCounter>(n_replicas, PNCounter.class);
 

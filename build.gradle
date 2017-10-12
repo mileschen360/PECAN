@@ -22,7 +22,12 @@ dependencies {
     compile "com.sun.jersey:jersey-server:1.9.1"
     compile "com.sun.jersey:jersey-json:1.9.1"
 
+    // template engine
     compile 'org.glassfish.jersey.ext:jersey-mvc-mustache:2.3.1'
+
+    compile "com.basho.riak:riak-client:2.0.1"
+    compile "org.slf4j:slf4j-simple:1.7.25"  // select one or none from slf4j
+    //compile "org.slf4j:slf4j-api:1.7.25"
 
     // for interceptors and filters
     compile "com.sun.jersey.contribs:jersey-contribs:1.19"

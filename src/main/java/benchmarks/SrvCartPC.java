@@ -1,10 +1,10 @@
-package pc;
+package benchmarks;
 /** This package contains the javaapp version of tested program
  *  to be tested by JPF. PC means personal computer, i.e. it is
  *  a desktop app without network communications
  */
 
-public class SrvCartPC implements declaration.SrvCart{
+public class SrvCartPC implements scenarios.SrvCart{
     final int CAPACITY = 10;
     int[] product_ids;
     String[] product_docs;
