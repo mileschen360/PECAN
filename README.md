@@ -16,7 +16,7 @@ All benchmarks are located in bechmarks folder.
 
 ### Distributed Counter
 
-A eventual consistent distributed counter can be implemented by CRDTs, such as GCounter and PNCounter
+An eventual consistent distributed counter can be implemented by CRDTs, such as GCounter and PNCounter
 
 ### Unique Poll
 
