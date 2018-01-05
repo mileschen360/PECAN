@@ -17,14 +17,16 @@ public class BenchMeMain {
         // srvhub.ServiceHub.srv_inventory_pc = srv_inventory;
         // srvhub.ServiceHub.srv_inventory_prion = srv_inventory;
         //srv_inventory_prion.test(); // test the inventory service
-        try{
-            dbprovider.ProductsRiak.setUpCluster();
-            benchmarks.SrvReviewRiak srv_review_riak = new benchmarks.SrvReviewRiak();
-            srv_review_riak.test();
-            dbprovider.ProductsRiak.cluster.shutdown();
-        }catch (Exception e){
-            System.out.println(e.getMessage());
-        }
+        // try{
+        //     dbprovider.ProductsRiak.setUpCluster();
+        //     benchmarks.SrvReviewRiak srv_review_riak = new benchmarks.SrvReviewRiak();
+        //     srv_review_riak.test();
+        //     dbprovider.ProductsRiak.cluster.shutdown();
+        // }catch (Exception e){
+        //     System.out.println(e.getMessage());
+        // }
+
+        benchmarks.ChatRoomPrion.test();
 
     }
 }

@@ -1,8 +1,10 @@
-/** This package provides the dababase 
+/** This package provides the dababase for 
+ * 
  * 
  */
 package dbprovider;
 
+// for storing product information
 public class ProductsPrion extends infrastructure.Replica{
     public final static int CAPACITY = 20;
     public final static int REVIEWS_CAPACITY = 9;
