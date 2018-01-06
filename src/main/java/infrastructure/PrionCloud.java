@@ -47,7 +47,6 @@ public class PrionCloud<T extends Replica>{  // TODO: templatize PrionClound
 
     }
 
-
     public T get(int i_node){
         T dd = data_nodes[i_node];
         dd.hosted_node_id = i_node;

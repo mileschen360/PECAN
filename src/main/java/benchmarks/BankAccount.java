@@ -30,5 +30,4 @@ public class BankAccount{
     public int balance(){
         return cloud.get(0).value();
     }
-
 }

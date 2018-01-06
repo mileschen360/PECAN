@@ -26,7 +26,8 @@ public class BenchMeMain {
         //     System.out.println(e.getMessage());
         // }
 
-        benchmarks.ChatRoomPrion.test();
+        // benchmarks.ChatRoomPrion.test();
+        benchmarks.OnlineAlbumPrion.test();
 
     }
 }

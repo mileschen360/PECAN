@@ -30,6 +30,7 @@ An eventual consistent distributed counter can be implemented by CRDTs, such as 
 
 ### Bank Account
 
+### Chat Room
 
 ### Shopping Cart
 

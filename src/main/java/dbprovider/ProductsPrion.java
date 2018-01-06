@@ -1,4 +1,4 @@
-/** This package provides the dababase for 
+/** This package provides the dababase for different applications
  * 
  * 
  */
